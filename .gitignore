@@ -1,0 +1,5 @@
+./*.exe
+./server/*.exe
+./server/main
+./client/*.exe
+./client/main
