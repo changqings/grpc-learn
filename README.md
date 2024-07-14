@@ -31,5 +31,5 @@ go get github.com/golang/protobuf/protoc-gen-go@latest
 go get github.com/golang/protobuf/protoc-gen-go-grpc@latest
 protoc -I ./ --go_out=./ --go-grpc_out=./ hello.proto
 ```
-## LISCENSE
+## LICENSE
 MIT
