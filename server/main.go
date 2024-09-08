@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"grpc-learn/hello"
+	"log/slog"
 	"net"
 
 	"google.golang.org/grpc"
@@ -15,8 +16,9 @@ type HelloServer struct {
 }
 
 func (h *HelloServer) SayHello(ctx context.Context, req *hello.HelloRequest) (*hello.HelloReply, error) {
+	slog.Info("Received request", "name", req.Name, "msg", req.Message)
 	return &hello.HelloReply{
-		Message: "hello",
+		Message: req.Message + " from server",
 		Name:    req.GetName(),
 	}, nil
 }
